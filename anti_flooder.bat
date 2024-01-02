@@ -1,5 +1,6 @@
 @echo off
 color 6
+title po odsraneni vsech slozek muzete program zavrit.
 set /a a=1
 set adresar=%userprofile%\Desktop
 goto zachrana
@@ -13,7 +14,6 @@ if exist %adresar%\%a% (
 )
 
 if not exist %adresar%\%a% (
-    echo Všechny soubory a složky byly úspěšně odstraněny!
-    pause
-    exit
+	set /a a=+1
+	goto zachrana	
 )
